@@ -2,12 +2,12 @@ const context = require.context('./packages', true, /index\.js$/);
 const components={};
 
 context.keys().forEach((comp)=>{
-    components[comp.name]=context(comp).default;
+    let compt=context(comp).default;
+    components[compt.name]=compt;
 });
 
-
 const install = function(Vue) {
-    for(var compName of components){
+    for(var compName in components){
         Vue.component(compName, components[compName]);
     }
   }
@@ -18,5 +18,5 @@ const install = function(Vue) {
 
 export default {
     install,
-    components
+    ...components
 };
