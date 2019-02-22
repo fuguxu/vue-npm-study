@@ -15,4 +15,12 @@ npm run dev
 npm run build
 ```
 
+usage:
+npm install vue-npm-study 
+
+import vueNpmStudy from 'vue-npm-study'
+
+vue.use(vueNpmStudy)
+
+
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
